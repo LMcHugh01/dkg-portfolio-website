@@ -1,8 +1,57 @@
+
 .main-content {
-  padding-top: 70px;  /* space for fixed navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-section {
-  padding: 60px 20px;
-  min-height: 100vh; /* full viewport height */
+/* Sections */
+.section {
+  width: 100%;
+  padding-top: 150px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
+
+.section-content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* ────────────── Home Section ────────────── */
+#home {
+  color: #fff;
+}
+
+.name {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  color: transparent; 
+}
+
+/* ────────────── Social Links ────────────── */
+.socialMedia-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.social-link img:hover {
+  background-color: #00bfff;
+}
+
+
+
