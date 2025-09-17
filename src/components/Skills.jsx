@@ -3,31 +3,48 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import '../style/Skills.css'
 
+import htmlLogo from "../assets/skill-icons/html-icon.png"
+import cssLogo from "../assets/skill-icons/css-icon.png"
+import jsLogo from "../assets/skill-icons/javascript-icon.png"
+import reactLogo from "../assets/skill-icons/react-icon.png"
+import tailwindLogo from "../assets/skill-icons/tailwind-icon.png"
+import nodeJSLogo from "../assets/skill-icons/nodeJS-icon.png"
+import expressLogo from "../assets/skill-icons/express-icon.png"
+import mongoDBLogo from "../assets/skill-icons/mongoDB-icon.png"
+import gitLogo from "../assets/skill-icons/git-icon.png"
+import figmaLogo from "../assets/skill-icons/figma-icon.png"
+import shopifyLogo from "../assets/skill-icons/shopify-icon.png"
+
+import frontendIcon from "../assets/skill-icons/frontend-icon.png"
+import backendIcon from "../assets/skill-icons/backend-icon.png"
+import toolsIcon from "../assets/skill-icons/tolls-icon.png"
+
+
 const skillsData = {
   "Front-end": [
-    { name: "HTML", img: "/src/assets/skill-icons/html-icon.png" },
-    { name: "CSS", img: "/src/assets/skill-icons/css-icon.png" },
-    { name: "JavaScript", img: "/src/assets/skill-icons/javascript-icon.png" },
-    { name: "React", img: "/src/assets/skill-icons/react-icon.png" },
-    { name: "Tailwind CSS", img: "/src/assets/skill-icons/tailwind-icon.png" },
+    { name: "HTML", img: {htmlLogo} },
+    { name: "CSS", img: {cssLogo} },
+    { name: "JavaScript", img: {jsLogo} },
+    { name: "React", img: {reactLogo} },
+    { name: "Tailwind CSS", img: {tailwindLogo} },
   ],
   "Back-end": [
-    { name: "Node.js", img: "/src/assets/skill-icons/nodeJS-icon.png" },
-    { name: "Express", img: "/src/assets/skill-icons/express-icon.png" },
-    { name: "MongoDB", img: "/src/assets/skill-icons/mongoDB-icon.png" },
+    { name: "Node.js", img: {nodeJSLogo} },
+    { name: "Express", img: {expressLogo} },
+    { name: "MongoDB", img: {mongoDBLogo} },
   ],
   Tools: [
-    { name: "Git", img: "/src/assets/skill-icons/git-icon.png" },
-    { name: "Figma", img: "/src/assets/skill-icons/figma-icon.png" },
-    { name: "Shopify", img: "/src/assets/skill-icons/shopify-icon.png" },
+    { name: "Git", img: {gitLogo} },
+    { name: "Figma", img: {figmaLogo} },
+    { name: "Shopify", img: {shopifyLogo} },
   ],
 };
 
 
 const tabs = [
-  { key: "Front-end", img: "/src/assets/skill-icons/frontend-icon.png" },
-  { key: "Back-end", img: "/src/assets/skill-icons/backend-icon.png" },
-  { key: "Tools", img: "/src/assets/skill-icons/tolls-icon.png" },
+  { key: "Front-end", img: {frontendIcon} },
+  { key: "Back-end", img: {backendIcon} },
+  { key: "Tools", img: {toolsIcon} },
 ];
 
 const Skills = () => {
