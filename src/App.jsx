@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 import githubLogo from "./assets/github-logo.png"
 import linkedInLogo from "./assets/linkedIn-logo.png"
-import cssLogo from "./assets/skill-icons/css-icon.png"
+
 
 
 function App() {
@@ -36,26 +36,28 @@ function App() {
 
       <div id="work" className="section">
         <div className="section-content">
-          <h1>Work Section</h1>
-        </div>
+          <h1>Projects</h1>
+          <div className="projects-grid">
+            <div className='project-card'>
+              <img src="" alt="Project screenshot" />
+              <p>Project description...</p>
+            </div>
+          </div>
       </div>
 
       <div id="contact" className="section">
         <div className="section-content">
           <h1>Contact Section</h1>
           <div className="socialMedia-links">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className='social-link'>
-            <img src={githubLogo} alt="GitHub" />
-          </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className='social-link'>
-            <img src={linkedInLogo} alt="" />
-          </a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className='social-link'>
-            <img src={cssLogo} alt="" />
-          </a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className='social-link'>
+              <img src={githubLogo} alt="GitHub" />
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className='social-link'>
+              <img src={linkedInLogo} alt="" />
+            </a>
         </div>
       </div>
-
+      </div>
       </div>
     </div>
   );

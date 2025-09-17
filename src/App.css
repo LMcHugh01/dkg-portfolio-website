@@ -38,6 +38,13 @@
   background-color: var(--bg-2);
 }
 
+/* ────────────── Work Section ────────────── */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 
 /* ────────────── Social Links ────────────── */
 .socialMedia-links {
