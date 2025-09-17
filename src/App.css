@@ -9,30 +9,35 @@
 /* Sections */
 .section {
   width: 100%;
-  padding-top: 150px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  padding: 50px 0px;
 }
 
 .section-content {
   max-width: 1200px;
   width: 100%;
   text-align: center;
+  
 }
 
 /* ────────────── Home Section ────────────── */
 #home {
   color: #fff;
+  padding-top: 150px;
 }
 
-.name {
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; 
-  color: transparent; 
+.quick-intro {
+  padding: 50px 0px;
 }
+
+
+/* ────────────── About Section ────────────── */
+#about {
+  background-color: var(--bg-2);
+}
+
 
 /* ────────────── Social Links ────────────── */
 .socialMedia-links {
