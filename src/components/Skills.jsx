@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../style/Skills.css";
 
-import htmlLogo from "../assets/skill-icons/html-icon.png";
-import cssLogo from "../assets/skill-icons/css-icon.png";
-import jsLogo from "../assets/skill-icons/javascript-icon.png";
-import reactLogo from "../assets/skill-icons/react-icon.png";
-import tailwindLogo from "../assets/skill-icons/tailwind-icon.png";
-import nodeJSLogo from "../assets/skill-icons/nodeJS-icon.png";
-import expressLogo from "../assets/skill-icons/express-icon.png";
-import mongoDBLogo from "../assets/skill-icons/mongoDB-icon.png";
-import gitLogo from "../assets/skill-icons/git-icon.png";
-import figmaLogo from "../assets/skill-icons/figma-icon.png";
-import shopifyLogo from "../assets/skill-icons/shopify-icon.png";
+import htmlLogo from "../assets/skill-icons/black/html-icon.png";
+import cssLogo from "../assets/skill-icons/black/css-icon.png";
+import jsLogo from "../assets/skill-icons/black/javascript-icon.png";
+import reactLogo from "../assets/skill-icons/black/react-icon.png";
+import tailwindLogo from "../assets/skill-icons/black/tailwind-icon.png";
+import nodeJSLogo from "../assets/skill-icons/black/nodeJS-icon.png";
+import expressLogo from "../assets/skill-icons/black/express-icon.png";
+import mongoDBLogo from "../assets/skill-icons/black/mongoDB-icon.png";
+import gitLogo from "../assets/skill-icons/black/git-icon.png";
+import figmaLogo from "../assets/skill-icons/black/figma-icon.png";
+import shopifyLogo from "../assets/skill-icons/black/shopify-icon.png";
 
 
-import frontendIcon from "../assets/skill-icons/frontend-icon.png";
-import backendIcon from "../assets/skill-icons/backend-icon.png";
-import toolsIcon from "../assets/skill-icons/tools-icon.png";
+import frontendIcon from "../assets/skill-icons/tab-markers/frontend-icon.png";
+import backendIcon from "../assets/skill-icons/tab-markers/backend-icon.png";
+import toolsIcon from "../assets/skill-icons/tab-markers/tools-icon.png";
 
 const skillsData = {
   "Front-end": [
