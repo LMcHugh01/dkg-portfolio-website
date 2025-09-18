@@ -50,7 +50,7 @@ const Skills = () => {
 
   return (
     <div className="skills-section">
-      <h2 className="skills-heading">What I Bring to the Table</h2>
+      <h2 className="skills-heading">Tech Stack</h2>
 
       <div className="skills-container">
         <AnimatePresence mode="wait">

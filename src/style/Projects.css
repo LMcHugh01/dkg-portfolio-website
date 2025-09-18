@@ -8,36 +8,67 @@
   font-weight: 700;
   margin-bottom: 3rem;
   color: #f1f5f9;
-  letter-spacing: 1px;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 2.5rem;
-  justify-items: center;
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.arrow.left {
+  left: -60px;
+}
+
+.arrow.right {
+  right: -60px;
 }
 
 .project-card {
-  background-color: rgba(30, 41, 59, 0.85);
-  border-radius: 1rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 400px;
-  text-align: left;
+  box-shadow: 0 12px 30px rgba(0, 191, 225, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 20px rgba(225, 0, 225, 0.8);
 }
 
 .project-screenshot {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
-  border-bottom: 2px solid #334155;
 }
 
 .project-content {
@@ -45,7 +76,7 @@
 }
 
 .project-name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #f8fafc;
   margin-bottom: 0.5rem;
@@ -54,5 +85,4 @@
 .project-description {
   font-size: 1rem;
   color: #cbd5e1;
-  line-height: 1.5;
 }

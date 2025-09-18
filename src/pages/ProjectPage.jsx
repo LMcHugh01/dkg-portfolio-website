@@ -1,9 +1,11 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import "../style/ProjectPage.css"
 
 import ReelRatingsImg from "../assets/project-screenshots/ReelRatings.png";
 import RecipeXImg from "../assets/project-screenshots/RecipeX.png";
 import DrunkGamesImg from "../assets/project-screenshots/DrunkGames.png";
+import BackToProjects from "../components/BackToProjects";
 
 const projectData = {
   ReelRatings: {
@@ -37,7 +39,7 @@ function ProjectPage() {
       <img src={project.img} alt={project.name} className="project-page-img" />
       <p>{project.description}</p>
 
-      <Link to="/" className="back-link">← Back to Projects</Link>
+      <BackToProjects />
     </div>
   );
 }

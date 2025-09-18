@@ -54,7 +54,7 @@ function HomePage() {
 
       <div id="work" className="section">
         <div className="section-content">
-          <Projects />
+            <Projects />
         </div>
       </div>
 
