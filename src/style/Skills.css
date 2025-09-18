@@ -1,18 +1,17 @@
 .skills-section {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: rgb(199, 203, 255);
-    color: var(--bg);
-    border-radius: 25px;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: rgb(199, 203, 255);
+  color: var(--bg);
+  border-radius: 25px;
+}
+
+.skills-heading {
+  color: var(--bg);
 }
 
 .skills-container {
   margin: 20px 0;
-  
-}
-
-.skills-heading {
-    color: var(--bg);
 }
 
 .skills-list {
@@ -30,7 +29,7 @@
   text-align: center;
   gap: 0.5rem;
   border-bottom: 2px solid var(--bg);
-
+  padding-bottom: 10px;
 }
 
 .skill-icon {
@@ -39,27 +38,37 @@
   object-fit: contain;
 }
 
+/* ───────────────────────────────────────────
+   Tabs Name
+──────────────────────────────────────────── */
+
+.active-tab-name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .active-name {
-    color: var(--bg);
+  color: var(--bg);
+  font-weight: 500;
 }
 
+/* ───────────────────────────────────────────
+   Tabs Slider
+──────────────────────────────────────────── */
 .tabs-slider {
-    left: 50%;
-    transform: translateX(-50%);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-    margin-top: 2rem;    
-    padding: 0 1rem;
-    height: 60px;
-    border-radius: 40px;
-    z-index: 1000;
-    background: var(--gradient);
-    width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+  height: 60px;
+  width: fit-content;
+  border-radius: 40px;
+  z-index: 1000;
+  background: var(--gradient);
 }
-
 
 .tab-marker {
   width: 50px;
@@ -68,8 +77,10 @@
   cursor: pointer;
   border-radius: 50%;
   opacity: 0.5;
-  transition: opacity 0.3s;
-
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tab-marker img {
@@ -80,6 +91,7 @@
 
 .tab-marker.active {
   opacity: 1;
-  background-color:  white;
-  transform: scale(1.2); 
+  background-color: white;
+  transform: scale(1.2);
 }
+

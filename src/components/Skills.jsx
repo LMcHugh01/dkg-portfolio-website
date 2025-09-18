@@ -77,7 +77,7 @@ const Skills = () => {
       </div>
 
       <div className="tabs-slider">
-        {tabs.map((tab, index) => (
+        {tabs.map((tab) => (
           <div
             key={tab.key}
             className={`tab-marker ${activeTab === tab.key ? "active" : ""}`}
@@ -86,12 +86,6 @@ const Skills = () => {
             <img src={tab.img} alt={tab.key} />
           </div>
         ))}
-
-        <motion.div
-          className="slider-indicator"
-          animate={{ x: tabs.findIndex((t) => t.key === activeTab) * 80 }} 
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        />
       </div>
     </div>
   );
