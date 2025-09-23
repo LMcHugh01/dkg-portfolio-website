@@ -1,9 +1,9 @@
-
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+
 }
 
 /* ───────────────────────────────────────────
@@ -28,11 +28,52 @@
 ──────────────────────────────────────────── */
 #home {
   color: #fff;
-  padding-top: 150px;
 }
 
-.quick-intro {
-  padding: 50px 0px;
+.mt-4 {
+  padding-bottom: 20px;
+}
+
+/* ────────────── Glow Line ────────────── */
+
+.glow-line {
+  position: relative;
+  display: block;
+  margin-bottom: 50px;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #0ff, #f0f);
+  border-radius: 5px;
+  animation: beam-expand 3s forwards;
+}
+
+@keyframes beam-expand {
+  0% {
+    width: 0;
+    opacity: 0.8;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+  }
+  100% {
+    width: 80vw;
+    height:3px;
+    opacity: 1;
+    box-shadow: 0 0 30px #0ff, 0 0 60px #f0f;
+  }
+}
+
+.intro-title {
+  position: absolute;
+  color: #0ff;
+  font-size: 3rem;
+  opacity: 0;
+  animation: fade-in 1.5s 0.7s forwards; /* delay for beam to start first */
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
 }
 
 
@@ -40,9 +81,6 @@
 /* ───────────────────────────────────────────
    About Section
 ──────────────────────────────────────────── */
-#about {
-  background-color: var(--bg-2);
-}
 
 #about p {
   margin: 50px 0;
@@ -52,9 +90,7 @@
    Work Section 
 ──────────────────────────────────────────── */
 
-#work {
-  background-color: var(--bg);
-}
+
 
 /* ───────────────────────────────────────────
    Contact Section
