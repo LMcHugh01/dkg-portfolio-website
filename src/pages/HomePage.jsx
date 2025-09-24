@@ -42,12 +42,12 @@ import { AuroraText } from "@/components/ui/aurora-text";
           {/* Shooting Stars Background */}
           <ShootingStars
             className="absolute inset-0 pointer-events-none z-0"
-            starColor="#9E00FF"
-            trailColor="#2EB9DF"
+            starColor="#f0f"
+            trailColor="#f0f"
             minSpeed={15}
             maxSpeed={35}
-            minDelay={1200}
-            maxDelay={4200}
+            minDelay={800}
+            maxDelay={3000}
           />
 
           {/* Content Overlay */}
