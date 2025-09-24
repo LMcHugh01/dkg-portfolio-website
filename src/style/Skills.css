@@ -1,9 +1,13 @@
 .skills-section {
-  background-color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgb(225, 225, 225, 0),
+    rgb(255, 255, 255),
+    rgb(225, 225, 225, 0)
+  );
   text-align: center;
   padding: 40px 20px;
   color: var(--bg);
-  border-radius: 25px;
 }
 
 .skills-heading {
@@ -84,9 +88,16 @@
   object-fit: contain;
 }
 
-.skill-name {
-  color: #fff;
+.skill-item .skill-name {
+  color: #000;          /* hide text initially */
+  transition: color 0.5s ease; /* smooth fade-in */
 }
+
+/* On hover, show text */
+.skill-item:hover .skill-name {
+  color: white;                /* turn white on hover */
+}
+
 
 /* ───────────────────────────────────────────
    Tabs Name

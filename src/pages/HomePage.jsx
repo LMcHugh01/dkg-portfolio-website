@@ -69,7 +69,7 @@ import profileImg from "../assets/images/profileImg.png"
                   contactSection.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Get in touch ⌯⌲
+                Let's Connect ⌯⌲
               </button>
             </div>
           </div>
@@ -78,7 +78,7 @@ import profileImg from "../assets/images/profileImg.png"
         {/* About Section */}
         <div id="about" className="section">
           <div className="section-content">
-            <h3>More about me...</h3>
+            <h3>About me...</h3>
             <img src={profileImg} alt="" className="profile-img"/>
             <p>
               I’m a passionate and detail-oriented web developer with a focus on

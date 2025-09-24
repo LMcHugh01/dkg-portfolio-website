@@ -10,7 +10,7 @@
 }
 
 .section-content {
-  max-width: 1200px;
+
   width: 100%;
   text-align: center;
 }
@@ -67,14 +67,16 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   transition: transform .2s ease, box-shadow .3s ease, background .3s ease;
+  margin-bottom: 10px;
 }
 
 .contact-btn:hover {
   transform: translateY(-6px) scale(1.05);
   color: #f0f;
   font-weight: bold;
-  box-shadow: 0 8px 25px rgba(255, 0, 255, 0.4);
+  box-shadow: 0 8px 8px rgba(255, 0, 255, 0.4);
   background: rgba(255, 255, 255, 0.1);
+
 }
 
 /* ────────────── Glow Line ────────────── */
