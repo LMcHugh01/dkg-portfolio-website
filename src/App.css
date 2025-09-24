@@ -4,18 +4,18 @@
 ──────────────────────────────────────────── */
 .section {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 50px 0px;
+  padding: 50px 0px 0px 0px;
 }
 
 .section-content {
   max-width: 1200px;
   width: 100%;
   text-align: center;
-  
 }
+
+/* ────────────── Planet ────────────── */
 
 @keyframes slow-rotate {
   from {
@@ -35,7 +35,6 @@
   margin-bottom: 50px;
 }
 
-
 .planet {
   position: absolute;
   bottom: 0;  
@@ -53,15 +52,12 @@
 #home {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  display: block;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
   background: transparent; 
   overflow: hidden;
-  border: 1px solid red;
-}
-
-.mt-4 {
-  padding-bottom: 20px;
 }
 
 .contact-btn {
@@ -135,8 +131,11 @@
   margin: 50px 0;
 }
 
-#about {
-  border: 1px solid blue;
+.profile-img {
+  width: 30%;
+  height: auto;
+  border-radius: 25px;
+  display: inline-block;
 }
 
 /* ───────────────────────────────────────────

@@ -55,6 +55,7 @@ html, body {
   width: 100%;
   scrollbar-width: thin;
   scrollbar-color: var(--brand) var(--bg);
+  margin: 0;
 }
 
 body {

@@ -1,22 +1,22 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-
+// import components
 import Skills from "../components/Skills.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Projects from "../components/Projects.jsx";
 import Contact from "../components/Contact.jsx";
-import Skills2 from "@/components/Skills2.jsx";
 import TypingText from "@/components/TypingText.jsx";
-
-import "../style/TypingText.css"
-
-import planetImg from "../assets/images/planet.png"
-
 import { ShootingStars } from "@/components/ui/shadcn-io/shooting-stars/index.jsx";
 import { AuroraText } from "@/components/ui/aurora-text";
 
 
+//import styles
+import "../style/TypingText.css"
+
+// import images
+import planetImg from "../assets/images/planet.png"
+import profileImg from "../assets/images/profileImg.png"
 
   function HomePage() {
   
@@ -37,18 +37,16 @@ import { AuroraText } from "@/components/ui/aurora-text";
       </div>
       <div className="main-content">
         <Navbar />
-        <div id="home" className="section ">
-          
-          {/* Shooting Stars Background */}
-          <ShootingStars
-            className="absolute inset-0 pointer-events-none z-0"
-            starColor="#f0f"
-            trailColor="#f0f"
-            minSpeed={15}
-            maxSpeed={35}
-            minDelay={800}
-            maxDelay={3000}
-          />
+        <div id="home" className="section">
+        <ShootingStars
+          className="absolute inset-0 pointer-events-none z-0"
+          starColor="#f0f"
+          trailColor="#f0f"
+          minSpeed={15}
+          maxSpeed={35}
+          minDelay={800}
+          maxDelay={3000}
+        /> 
 
           {/* Content Overlay */}
           <div className="section-content relative z-10 flex flex-col items-center justify-center text-white text-center px-4">         
@@ -58,14 +56,14 @@ import { AuroraText } from "@/components/ui/aurora-text";
             </div>
             <span className="glow-line"></span>
             <div className="flex flex-col items-center gap-8">
-              <h5 className="mt-4">
+              <h5>
                 <span className="typing-cursor">
                   <TypingText texts={["I'm an Aspiring Front End Developer", "I Love React & Tailwind", "Let's Build Something Awesome!"]} />
                 </span>
               </h5>
               <h6 className="location">📍Rotterdam, Netherlands.</h6>
               <button
-                className="contact-btn btn mt-4"
+                className="contact-btn"
                 onClick={() => {
                   const contactSection = document.getElementById("contact");
                   contactSection.scrollIntoView({ behavior: "smooth" });
@@ -80,10 +78,8 @@ import { AuroraText } from "@/components/ui/aurora-text";
         {/* About Section */}
         <div id="about" className="section">
           <div className="section-content">
-            <h5>More about me...</h5>
-            <h3>
-              Meet <AuroraText>Louis</AuroraText>,
-            </h3>
+            <h3>More about me...</h3>
+            <img src={profileImg} alt="" className="profile-img"/>
             <p>
               I’m a passionate and detail-oriented web developer with a focus on
               creating responsive, user-friendly digital experiences. My journey

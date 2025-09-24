@@ -65,7 +65,7 @@ const Skills = () => {
             {skillsData[activeTab].map((skill) => (
               <div key={skill.name} className="skill-item">
                 <img src={skill.img} alt={skill.name} className="skill-icon" />
-                <span>{skill.name}</span>
+                <span className="skill-name">{skill.name}</span>
               </div>
             ))}
           </motion.div>
