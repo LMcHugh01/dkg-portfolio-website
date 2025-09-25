@@ -6,11 +6,38 @@ import ReelRatingsImg from "../assets/project-screenshots/ReelRatings.png";
 import RecipeXImg from "../assets/project-screenshots/RecipeX.png";
 import DrunkGamesImg from "../assets/project-screenshots/DrunkGames.png";
 
-const projectData = [
-  { name: "ReelRatings", img: ReelRatingsImg, description: "Movie Website" },
-  { name: "RecipeX", img: RecipeXImg, description: "Recipe book Website" },
-  { name: "Drunk Games", img: DrunkGamesImg, description: "E-Commerce Store" }
-];
+import reactLogo from "../assets/skill-icons/black/react-icon.png";
+import tailwindLogo from "../assets/skill-icons/black/tailwind-icon.png";
+
+const projectData = {
+  ReelRatings: {
+    name: "ReelRatings",
+    img: ReelRatingsImg,
+    projectType: "Personal Project",
+    languages: [
+      { name: "React", logo: reactLogo },
+      { name: "Tailwind", logo: tailwindLogo },
+    ],
+  },
+  RecipeX: {
+    name: "RecipeX",
+    img: RecipeXImg,
+    projectType: "Personal Project",
+    languages: [
+      { name: "React", logo: reactLogo },
+      { name: "Tailwind", logo: tailwindLogo },
+    ],
+  },
+  "Drunk Games": {
+    name: "Drunk Games",
+    img: DrunkGamesImg,
+    projectType: "Personal Project",
+    languages: [
+      { name: "React", logo: reactLogo },
+      { name: "Tailwind", logo: tailwindLogo },
+    ],
+  },
+};
 
 function Projects() {
   return (
@@ -18,21 +45,32 @@ function Projects() {
       <h2 className="projects-heading">PROJECTS</h2>
 
       <div className="projects-grid">
-        {projectData.map((project) => (
+        {Object.values(projectData).map((project) => (
           <Link
             key={project.name}
             to={`/project/${project.name}`}
-            className="project-card-link"
+            className="projectCard-link"
           >
-            <div className="project-card">
+            <div className="projectCard">
               <img
                 src={project.img}
                 alt={project.name}
-                className="project-screenshot"
+                className="projectCard-screenshot"
               />
-              <div className="project-content">
-                <h3 className="project-name">{project.name}</h3>
-                <p className="project-description">{project.description}</p>
+              <div className="projectCard-content">
+                <h3 className="projectCard-name">{project.name}</h3>
+                <p className="projectCard-type">{project.projectType}</p>
+                <div className="projectCard-languages">
+                  {project.languages.map((lang, index) => (
+                    <div key={index} className="projectCard-language">
+                      <img
+                        src={lang.logo}
+                        alt={lang.name}
+                        className="projectCard-language-logo"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </Link>

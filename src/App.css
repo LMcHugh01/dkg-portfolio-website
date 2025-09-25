@@ -61,8 +61,12 @@
 }
 
 .contact-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 20px;
-  padding: 10px 10px;
+  padding: 15px 15px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -76,7 +80,10 @@
   font-weight: bold;
   box-shadow: 0 8px 8px rgba(255, 0, 255, 0.4);
   background: rgba(255, 255, 255, 0.1);
+}
 
+.satellite-img {
+  width: 30px;
 }
 
 /* ────────────── Glow Line ────────────── */
@@ -89,7 +96,7 @@
   height: 3px;
   background: linear-gradient(90deg, #0ff, #f0f);
   border-radius: 5px;
-  animation: beam-expand 2s forwards;
+  animation: beam-expand 1.5s forwards;
   
 }
 
@@ -129,8 +136,12 @@
    About Section
 ──────────────────────────────────────────── */
 
-#about p {
-  margin: 50px 0;
+.about-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 0 50px;
 }
 
 .profile-img {
@@ -138,6 +149,18 @@
   height: auto;
   border-radius: 25px;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .about-info {
+    flex-direction: column;
+  }
+
+  .profile-img {
+    width: 50%;
+  }
+
+  
 }
 
 /* ───────────────────────────────────────────
@@ -172,6 +195,53 @@
 
 .social-link img:hover {
   background-color: #00bfff;
+}
+
+/* ────────────── Break Line ────────────── */
+
+.break-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 20%;
+}
+
+.break-line::before {
+  content: "";
+  flex: 1;
+  height: 2px;
+  margin-right: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(240, 0, 255, 0),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+.break-line::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  margin-left: 10px;
+  background: linear-gradient(
+    to left,
+    rgba(240, 0, 255, 0),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+.break-line::marker,
+.break-line span {
+  content: "";
+}
+
+.break-line span {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
 }
 
 

@@ -17,10 +17,15 @@ import "../style/TypingText.css"
 // import images
 import planetImg from "../assets/images/planet.png"
 import profileImg from "../assets/images/profileImg.png"
+import satelliteWhite from "../assets/images/satellite-white.png"
+import satellitePink from "../assets/images/satellite-pink.png"
+
 
   function HomePage() {
   
     const [showIntro, setShowIntro] = useState(false);
+
+      const [hovered, setHovered] = useState(false);
 
     useEffect(() => {
       const timeout = setTimeout(() => {
@@ -68,8 +73,10 @@ import profileImg from "../assets/images/profileImg.png"
                   const contactSection = document.getElementById("contact");
                   contactSection.scrollIntoView({ behavior: "smooth" });
                 }}
+                onMouseEnter={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
               >
-                Let's Connect ⌯⌲
+                Let's Connect<img src={hovered ? satellitePink : satelliteWhite} alt="" className="satellite-img"/>
               </button>
             </div>
           </div>
@@ -79,17 +86,19 @@ import profileImg from "../assets/images/profileImg.png"
         <div id="about" className="section">
           <div className="section-content">
             <h3>About me...</h3>
-            <img src={profileImg} alt="" className="profile-img"/>
-            <p>
-              I’m a passionate and detail-oriented web developer with a focus on
-              creating responsive, user-friendly digital experiences. My journey
-              into tech started with curiosity and quickly grew into a love for
-              building functional and visually appealing websites. With a
-              background that combines creativity and problem-solving, I enjoy
-              turning complex ideas into seamless solutions. Outside of coding, I’m
-              constantly exploring new tools and technologies to grow my skills and
-              stay ahead in this ever-evolving field.
-            </p>
+            <div className="about-info">
+              <img src={profileImg} alt="" className="profile-img"/>
+              <p>
+                I’m a passionate and detail-oriented web developer with a focus on
+                creating responsive, user-friendly digital experiences. My journey
+                into tech started with curiosity and quickly grew into a love for
+                building functional and visually appealing websites. With a
+                background that combines creativity and problem-solving, I enjoy
+                turning complex ideas into seamless solutions. Outside of coding, I’m
+                constantly exploring new tools and technologies to grow my skills and
+                stay ahead in this ever-evolving field.
+              </p>
+            </div>
             <Skills />
 
           </div>
@@ -105,10 +114,15 @@ import profileImg from "../assets/images/profileImg.png"
         {/* Contact Section */}
         <div id="contact" className="section">
           <div className="section-content">
-            <h1>Contact Section</h1>
             <Contact />
           </div>
         </div>
+        <span className="break-line">
+          <span></span>
+        </span>
+        <footer>
+          <p>© Louis McHugh 2025</p>
+        </footer>
       </div>
     </div>
   );
