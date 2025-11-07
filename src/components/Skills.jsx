@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../style/Skills.css";
 
-import htmlLogo from "../assets/skill-icons/black/html-icon.png";
-import cssLogo from "../assets/skill-icons/black/css-icon.png";
-import jsLogo from "../assets/skill-icons/black/javascript-icon.png";
-import reactLogo from "../assets/skill-icons/black/react-icon.png";
-import tailwindLogo from "../assets/skill-icons/black/tailwind-icon.png";
-import nodeJSLogo from "../assets/skill-icons/black/nodeJS-icon.png";
-import expressLogo from "../assets/skill-icons/black/express-icon.png";
-import mongoDBLogo from "../assets/skill-icons/black/mongoDB-icon.png";
-import gitLogo from "../assets/skill-icons/black/git-icon.png";
-import figmaLogo from "../assets/skill-icons/black/figma-icon.png";
-import shopifyLogo from "../assets/skill-icons/black/shopify-icon.png";
+import {FaHtml5} from "react-icons/fa";
+import {FaCss3Alt} from "react-icons/fa";
+import {FaJs} from "react-icons/fa";
+import {FaReact} from "react-icons/fa";
+import {RiTailwindCssFill} from "react-icons/ri";
+import {FaNodeJs} from "react-icons/fa";
+import {SiExpress} from "react-icons/si";
+import {SiMongodb} from "react-icons/si";
+import {FaGitAlt} from "react-icons/fa";
+import {BiLogoFigma} from "react-icons/bi";
+import {FaShopify} from "react-icons/fa";
+import {RiSupabaseFill} from "react-icons/ri";
 
 
 import frontendIcon from "../assets/skill-icons/tab-markers/frontend-icon.png";
@@ -21,28 +22,29 @@ import toolsIcon from "../assets/skill-icons/tab-markers/tools-icon.png";
 
 const skillsData = {
   "Front-end": [
-    { name: "HTML", img: htmlLogo },
-    { name: "CSS", img: cssLogo },
-    { name: "JavaScript", img: jsLogo },
-    { name: "React", img: reactLogo },
-    { name: "Tailwind CSS", img: tailwindLogo },
+    { name: "HTML", icon: <FaHtml5 /> },
+    { name: "CSS", icon: <FaCss3Alt /> },
+    { name: "JavaScript", icon: <FaJs /> },
+    { name: "React", icon: <FaReact /> },
+    { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
   ],
   "Back-end": [
-    { name: "Node.js", img: nodeJSLogo },
-    { name: "Express", img: expressLogo },
-    { name: "MongoDB", img: mongoDBLogo },
+    { name: "Node.js", icon: <FaNodeJs /> },
+    { name: "Express", icon: <SiExpress /> },
+    { name: "MongoDB", icon: <SiMongodb /> },
   ],
   Tools: [
-    { name: "Git", img: gitLogo },
-    { name: "Figma", img: figmaLogo },
-    { name: "Shopify", img: shopifyLogo },
+    { name: "Git", icon: <FaGitAlt /> },
+    { name: "Figma", icon: <BiLogoFigma /> },
+    { name: "Shopify", icon: <FaShopify /> },
+    { name: "Supabase", icon: <RiSupabaseFill /> },
   ],
 };
 
 const tabs = [
-  { key: "Front-end", img: frontendIcon },
-  { key: "Back-end", img: backendIcon },
-  { key: "Tools", img: toolsIcon },
+  { key: "Front-end", icon: frontendIcon },
+  { key: "Back-end", icon: backendIcon },
+  { key: "Tools", icon: toolsIcon },
 ];
 
 const Skills = () => {
@@ -64,7 +66,7 @@ const Skills = () => {
           >
             {skillsData[activeTab].map((skill) => (
               <div key={skill.name} className="skill-item">
-                <img src={skill.img} alt={skill.name} className="skill-icon" />
+                <span className="skill-icon">{skill.icon}</span>
                 <span className="skill-name">{skill.name}</span>
               </div>
             ))}
@@ -83,7 +85,7 @@ const Skills = () => {
             className={`tab-marker ${activeTab === tab.key ? "active" : ""}`}
             onClick={() => setActiveTab(tab.key)}
           >
-            <img src={tab.img} alt={tab.key} />
+             <img src={tab.icon} alt={tab.name} className="skill-icon" />
           </div>
         ))}
       </div>

@@ -6,8 +6,9 @@ import ReelRatingsImg from "../assets/project-screenshots/ReelRatings.png";
 import RecipeXImg from "../assets/project-screenshots/RecipeX.png";
 import DrunkGamesImg from "../assets/project-screenshots/DrunkGames.png";
 
-import reactLogo from "../assets/skill-icons/black/react-icon.png";
-import tailwindLogo from "../assets/skill-icons/black/tailwind-icon.png";
+import {FaReact} from "react-icons/fa";
+import {RiTailwindCssFill} from "react-icons/ri";
+import {RiSupabaseFill} from "react-icons/ri";
 
 const projectData = {
   ReelRatings: {
@@ -15,8 +16,9 @@ const projectData = {
     img: ReelRatingsImg,
     projectType: "Personal Project",
     languages: [
-      { name: "React", logo: reactLogo },
-      { name: "Tailwind", logo: tailwindLogo },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "Supabase", icon: <RiSupabaseFill /> },
     ],
   },
   RecipeX: {
@@ -24,17 +26,17 @@ const projectData = {
     img: RecipeXImg,
     projectType: "Personal Project",
     languages: [
-      { name: "React", logo: reactLogo },
-      { name: "Tailwind", logo: tailwindLogo },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
     ],
   },
-  "Drunk Games": {
-    name: "Drunk Games",
+  "DKG E-Commerce Store": {
+    name: "DKG E-Commerce Store",
     img: DrunkGamesImg,
-    projectType: "Personal Project",
+    projectType: "Client Project",
     languages: [
-      { name: "React", logo: reactLogo },
-      { name: "Tailwind", logo: tailwindLogo },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
     ],
   },
 };
@@ -63,11 +65,7 @@ function Projects() {
                 <div className="projectCard-languages">
                   {project.languages.map((lang, index) => (
                     <div key={index} className="projectCard-language">
-                      <img
-                        src={lang.logo}
-                        alt={lang.name}
-                        className="projectCard-language-logo"
-                      />
+                      <span className="projectCard-skillIcon">{lang.icon}</span>
                     </div>
                   ))}
                 </div>

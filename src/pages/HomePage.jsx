@@ -63,7 +63,7 @@ import satellitePink from "../assets/images/satellite-pink.png"
             <div className="flex flex-col items-center gap-8">
               <h5>
                 <span className="typing-cursor">
-                  <TypingText texts={["I'm an Aspiring Front End Developer", "I Love React & Tailwind", "Let's Build Something Awesome!"]} />
+                  <TypingText texts={["I'm a Front End Developer", "I Love React & Tailwind", "Let's Build Something Awesome!"]} />
                 </span>
               </h5>
               <h6 className="location">📍Rotterdam, Netherlands.</h6>

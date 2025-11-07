@@ -7,8 +7,9 @@ import RecipeXImg from "../assets/project-screenshots/RecipeX.png";
 import DrunkGamesImg from "../assets/project-screenshots/DrunkGames.png";
 import BackToProjects from "../components/BackToProjects";
 
-import reactLogo from "../assets/skill-icons/black/react-icon.png";
-import tailwindLogo from "../assets/skill-icons/black/tailwind-icon.png";
+import {FaReact} from "react-icons/fa";
+import {RiTailwindCssFill} from "react-icons/ri";
+import {RiSupabaseFill} from "react-icons/ri";
 
 const projectData = {
   ReelRatings: {
@@ -18,8 +19,9 @@ const projectData = {
     description:
       "ReelRatings is a modern web application for browsing, rating, and discovering movies. Users can explore films by genre, rate and review them, and create personalized profiles with favorites and watchlists. The platform features a sleek UI with custom branding, dynamic backgrounds, and a transparent navbar. Future plans include AI-powered recommendations, trailer previews, and social features for a more interactive experience.",
     languages: [
-      { name: "React", logo: reactLogo },
-      { name: "Tailwind", logo: tailwindLogo },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "Supabase", icon: <RiSupabaseFill /> },
     ],
     startYear: 2025,
     endYear: "Present",
@@ -32,26 +34,26 @@ const projectData = {
     description:
       "RecipeX is a personal project that serves as a modern digital recipe book where users can save, browse, and share their favorite recipes. Built with React and TailwindCSS, the app emphasizes a clean and intuitive design for quick navigation across devices. Planned features include user accounts, community recipe sharing, ratings, and AI-powered suggestions for meal ideas based on available ingredients.",
     languages: [
-      { name: "React", logo: reactLogo },
-      { name: "Tailwind", logo: tailwindLogo },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
     ],
     startYear: 2025,
     endYear: "Present",
     link: "https://recipex.netlify.app",
   },
-  "Drunk Games": {
-    name: "Drunk Games",
+  "DKG E-Commerce Store": {
+    name: "DKG E-Commerce Store",
     img: DrunkGamesImg,
-    projectType: "Personal Project",
+    projectType: "Client Project",
     description:
       "Drunk Games is a personal e-commerce project that sells unique and entertaining drinking games. The platform is built with React and TailwindCSS, featuring a clean and responsive design optimized for mobile and desktop shopping experiences. It includes product listings, a shopping cart, and checkout flow, with future plans to expand into user reviews, bundle offers, and social sharing features.",
     languages: [
-      { name: "React", logo: reactLogo },
-      { name: "Tailwind", logo: tailwindLogo },
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
     ],
     startYear: 2023,
     endYear: "Present",
-    link: "https://drunkgames.com",
+    link: "https://drunkknightgames.netlify.app/",
   },
 };
 
@@ -74,11 +76,7 @@ function ProjectPage() {
         <div className="project-languages">
           {project.languages.map((lang, index) => (
             <div key={index} className="project-language">
-              <img
-                src={lang.logo}
-                alt={lang.name}
-                className="project-language-logo"
-              />
+              <span className="project-language-icon">{lang.icon}</span>
             </div>
           ))}
         </div>
