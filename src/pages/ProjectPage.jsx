@@ -3,13 +3,16 @@ import { useParams } from "react-router-dom";
 import "../style/ProjectPage.css";
 
 import ReelRatingsImg from "../assets/project-screenshots/ReelRatings.png";
-import RecipeXImg from "../assets/project-screenshots/RecipeX.png";
+import NeighbrImg from "../assets/project-screenshots/Neighbr.png";
 import DrunkGamesImg from "../assets/project-screenshots/DrunkGames.png";
 import BackToProjects from "../components/BackToProjects";
 
 import {FaReact} from "react-icons/fa";
 import {RiTailwindCssFill} from "react-icons/ri";
 import {RiSupabaseFill} from "react-icons/ri";
+import {FaNodeJs} from "react-icons/fa";
+import {SiExpress} from "react-icons/si";
+import {SiMongodb} from "react-icons/si";
 
 const projectData = {
   ReelRatings: {
@@ -27,19 +30,22 @@ const projectData = {
     endYear: "Present",
     link: "https://reelratings.netlify.app",
   },
-  RecipeX: {
-    name: "RecipeX",
-    img: RecipeXImg,
+  Neighbr: {
+    name: "Neighbr",
+    img: NeighbrImg,
     projectType: "Personal Project",
     description:
-      "RecipeX is a personal project that serves as a modern digital recipe book where users can save, browse, and share their favorite recipes. Built with React and TailwindCSS, the app emphasizes a clean and intuitive design for quick navigation across devices. Planned features include user accounts, community recipe sharing, ratings, and AI-powered suggestions for meal ideas based on available ingredients.",
+      "Neighbr is a community-driven platform that connects users with local service providers for tasks and projects. Users can browse, post, and assign jobs across categories like home services, fitness, tutoring, and more. Built with React and TailwindCSS, the app focuses on a clean, responsive interface for easy navigation. Planned features include user profiles with ratings, job tracking, and personalized recommendations for finding the right service providers nearby.",
     languages: [
       { name: "React", icon: <FaReact /> },
       { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "NodeJS", icon: <FaNodeJs /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
     ],
     startYear: 2025,
     endYear: "Present",
-    link: "https://recipex.netlify.app",
+    link: "https://neighbr.netlify.app",
   },
   "DKG E-Commerce Store": {
     name: "DKG E-Commerce Store",
@@ -50,6 +56,7 @@ const projectData = {
     languages: [
       { name: "React", icon: <FaReact /> },
       { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "Supabase", icon: <RiSupabaseFill /> },
     ],
     startYear: 2023,
     endYear: "Present",

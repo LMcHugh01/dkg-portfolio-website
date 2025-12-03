@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import "../style/Projects.css";
 
 import ReelRatingsImg from "../assets/project-screenshots/ReelRatings.png";
-import RecipeXImg from "../assets/project-screenshots/RecipeX.png";
+import NeighbrImg from "../assets/project-screenshots/Neighbr.png";
 import DrunkGamesImg from "../assets/project-screenshots/DrunkGames.png";
 
 import {FaReact} from "react-icons/fa";
 import {RiTailwindCssFill} from "react-icons/ri";
 import {RiSupabaseFill} from "react-icons/ri";
+import {FaNodeJs} from "react-icons/fa";
+import {SiExpress} from "react-icons/si";
+import {SiMongodb} from "react-icons/si";
 
 const projectData = {
   ReelRatings: {
@@ -21,13 +24,16 @@ const projectData = {
       { name: "Supabase", icon: <RiSupabaseFill /> },
     ],
   },
-  RecipeX: {
-    name: "RecipeX",
-    img: RecipeXImg,
+  Neighbr: {
+    name: "Neighbr",
+    img: NeighbrImg,
     projectType: "Personal Project",
     languages: [
       { name: "React", icon: <FaReact /> },
       { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "NodeJS", icon: <FaNodeJs /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "MongoDB", icon: <SiMongodb /> },
     ],
   },
   "DKG E-Commerce Store": {
@@ -37,6 +43,7 @@ const projectData = {
     languages: [
       { name: "React", icon: <FaReact /> },
       { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "Supabase", icon: <RiSupabaseFill /> },
     ],
   },
 };
