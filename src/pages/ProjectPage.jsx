@@ -5,6 +5,7 @@ import "../style/ProjectPage.css";
 import ReelRatingsImg from "../assets/project-screenshots/ReelRatings.png";
 import NeighbrImg from "../assets/project-screenshots/Neighbr.png";
 import DrunkGamesImg from "../assets/project-screenshots/DrunkGames.png";
+import fleaRdamImg from "../assets/project-screenshots/fleaRdam.png";
 import BackToProjects from "../components/BackToProjects";
 
 import {FaReact} from "react-icons/fa";
@@ -13,8 +14,28 @@ import {RiSupabaseFill} from "react-icons/ri";
 import {FaNodeJs} from "react-icons/fa";
 import {SiExpress} from "react-icons/si";
 import {SiMongodb} from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiSanity } from "react-icons/si";
+import { SiStripe } from "react-icons/si";
 
 const projectData = {
+  fleaRdam: {
+    name: "fleaRdam",
+    img: fleaRdamImg,
+    projectType: "Client Project",
+    description:
+      "fleaRdam is Rotterdam's first urban flea market. This full-stack website handles everything from event listings and ticket purchases to stall applications and vendor payments. Built with Next.js 15 and Sanity CMS, it features a complete stall application flow with admin review, Stripe payments, and automated emails via Resend.",
+    languages: [
+      { name: "React", icon: <FaReact /> },
+      { name: "Tailwind", icon: <RiTailwindCssFill /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Sanity", icon: <SiSanity /> },
+      { name: "Stripe", icon: <SiStripe /> },
+    ],
+    startYear: 2025,
+    endYear: "Present",
+    link: "https://fleardam.com",
+  },
   ReelRatings: {
     name: "ReelRatings",
     img: ReelRatingsImg,

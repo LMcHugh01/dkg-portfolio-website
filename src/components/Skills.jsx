@@ -14,7 +14,10 @@ import {FaGitAlt} from "react-icons/fa";
 import {BiLogoFigma} from "react-icons/bi";
 import {FaShopify} from "react-icons/fa";
 import {RiSupabaseFill} from "react-icons/ri";
-
+// New imports for fleaRdam stack
+import {SiNextdotjs} from "react-icons/si";
+import {SiSanity} from "react-icons/si";
+import {SiStripe} from "react-icons/si";
 
 import frontendIcon from "../assets/skill-icons/tab-markers/frontend-icon.png";
 import backendIcon from "../assets/skill-icons/tab-markers/backend-icon.png";
@@ -27,6 +30,7 @@ const skillsData = {
     { name: "JavaScript", icon: <FaJs /> },
     { name: "React", icon: <FaReact /> },
     { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
+    { name: "Next.js", icon: <SiNextdotjs /> },
   ],
   "Back-end": [
     { name: "Node.js", icon: <FaNodeJs /> },
@@ -38,6 +42,8 @@ const skillsData = {
     { name: "Figma", icon: <BiLogoFigma /> },
     { name: "Shopify", icon: <FaShopify /> },
     { name: "Supabase", icon: <RiSupabaseFill /> },
+    { name: "Sanity", icon: <SiSanity /> },
+    { name: "Stripe", icon: <SiStripe /> },
   ],
 };
 
