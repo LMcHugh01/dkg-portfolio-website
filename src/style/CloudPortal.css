@@ -1,0 +1,72 @@
+.cloud-portal {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 60px;
+    min-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cloud-layer {
+    position: absolute;
+    inset: -25% 0;
+    pointer-events: none;
+    will-change: transform;
+  }
+  
+  /* Distant clouds: soft, hazy, barely-there */
+  .cloud-layer-back {
+    background:
+      radial-gradient(340px 200px at 8% 30%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 70%),
+      radial-gradient(420px 240px at 40% 60%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0) 70%),
+      radial-gradient(380px 220px at 78% 25%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%),
+      radial-gradient(400px 230px at 95% 70%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+    filter: blur(55px);
+    opacity: 0.55;
+  }
+  
+  /* Mid-depth clouds */
+  .cloud-layer-mid {
+    background:
+      radial-gradient(300px 170px at 20% 45%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 70%),
+      radial-gradient(360px 200px at 55% 20%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 70%),
+      radial-gradient(320px 190px at 85% 55%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 70%);
+    filter: blur(38px);
+    opacity: 0.7;
+  }
+  
+  /* Near clouds: crisper edges, moves fastest */
+  .cloud-layer-front {
+    background:
+      radial-gradient(260px 150px at 12% 55%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 72%),
+      radial-gradient(300px 170px at 48% 35%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 72%),
+      radial-gradient(280px 160px at 80% 60%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 72%),
+      radial-gradient(260px 150px at 100% 30%, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0) 72%);
+    filter: blur(22px);
+    opacity: 0.85;
+  }
+  
+  /* The whiteout "door" moment — builds up at the scroll midpoint */
+  .cloud-veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, var(--soft-lavender) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .cloud-portal-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  @media (max-width: 700px) {
+    .cloud-portal {
+      min-height: 70vh;
+    }
+  }

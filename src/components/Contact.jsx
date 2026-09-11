@@ -7,64 +7,70 @@ import facebookLogo from "../assets/contact-icons/facebook.png";
 import instagramLogo from "../assets/contact-icons/instagram.png";
 import whatsappLogo from "../assets/contact-icons/whatsapp.png";
 
-import mountains from "../assets/images/mountains.png"
+const EMAIL = "dkgwebdevelopment@gmail.com";
+const PHONE_DISPLAY = "+31 6 18 93 29 65";
+const PHONE_TEL = "+31618932965";
 
 function Contact() {
   return (
-    <div className="contact-section">
-      <h2 className="contact-heading">Get in Touch</h2>
-      <img src={ mountains} alt="" />
+    <div className="contact-section" data-drift="0.04">
+      <h2 className="contact-heading">Get in touch</h2>
       <p className="contact-subtext">
-        Feel free to reach out through any of the platforms below!
+        Feel free to reach out through any of the platforms below.
       </p>
 
-      <div className="contact-icons">
-        <a
-          href="https://github.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-link"
-        >
-          <img src={githubLogo} alt="GitHub" className="contact-icon" />
-        </a>
+      <div className="contact-row">
+        <div className="contact-links-col">
+          <a href={`mailto:${EMAIL}`} className="contact-email">{EMAIL}</a>
+          <span className="contact-phone">{PHONE_DISPLAY}</span>
+        </div>
 
-        <a
-          href="https://linkedin.com/in/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-link"
-        >
-          <img src={linkedInLogo} alt="LinkedIn" className="contact-icon" />
-        </a>
-        <a
-          href="https://facebook.com/in/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-link"
-        >
-          <img src={facebookLogo} alt="Facebook" className="contact-icon" />
-        </a>
-        <a
-          href="https://instagram.com/in/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-link"
-        >
-          <img src={instagramLogo} alt="Instagram" className="contact-icon" />
-        </a>
-        <a
-          href="https://wahtsapp.com/in/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="contact-link"
-        >
-          <img src={whatsappLogo} alt="WhatsApp" className="contact-icon" />
-        </a>
-      </div>
+        <div className="contact-icons">
+          <a
+            href="https://github.com/LMcHugh01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-icon-btn"
+          >
+            <img src={githubLogo} alt="GitHub" />
+          </a>
 
-      <div className="contact-reg-links">
-        <p>Gmail: <a href="">dkgwebdevelopment@gmail.com</a></p>
-        <p>Phone Number: <a href="">+31 6 18 93 29 65</a></p>
+          <a
+            href="https://linkedin.com/in/louis-mchugh-270984261"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-icon-btn"
+          >
+            <img src={linkedInLogo} alt="LinkedIn" />
+          </a>
+
+          <a
+            href="https://facebook.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-icon-btn"
+          >
+            <img src={facebookLogo} alt="Facebook" />
+          </a>
+
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-icon-btn"
+          >
+            <img src={instagramLogo} alt="Instagram" />
+          </a>
+
+          <a
+            href="https://wa.me/31618932965"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-icon-btn"
+          >
+            <img src={whatsappLogo} alt="WhatsApp" />
+          </a>
+        </div>
       </div>
     </div>
   );

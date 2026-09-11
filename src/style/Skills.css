@@ -1,10 +1,4 @@
 .skills-section {
-  background: linear-gradient(
-    180deg,
-    rgb(225, 225, 225, 0),
-    rgb(255, 255, 255),
-    rgb(225, 225, 225, 0)
-  );
   text-align: center;
   padding: 40px 20px;
   color: var(--bg);
@@ -129,10 +123,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   margin: 2rem auto 0;
-  padding: 0 1rem;
-  height: 60px;
+  padding: 0.5rem 1.25rem;
+  max-width: 100%;
   width: fit-content;
   border-radius: 40px;
   z-index: 1000;
@@ -140,9 +135,9 @@
 }
 
 .tab-marker {
-  width: 50px;
-  height: 50px;
-  padding: 10px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
   cursor: pointer;
   border-radius: 50%;
   opacity: 0.5;
@@ -150,12 +145,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
-.tab-marker img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.tab-marker .skill-icon {
+  font-size: 24px;
+  width: auto;
+  height: auto;
+  color: #000;
 }
 
 .tab-marker.active {
@@ -164,3 +161,25 @@
   transform: scale(1.2);
 }
 
+/* ───────────────────────────────────────────
+   Responsive: 5 tabs need room to breathe
+──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .tabs-slider {
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .tab-marker {
+    width: 38px;
+    height: 38px;
+  }
+
+  .tab-marker .skill-icon {
+    font-size: 20px;
+  }
+
+  .skills-list {
+    gap: 2.5rem;
+  }
+}

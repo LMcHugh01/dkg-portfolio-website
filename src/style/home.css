@@ -1,0 +1,239 @@
+.descent-root {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.descent-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ─────────────────────────────
+   Scroll progress indicator
+─────────────────────────────── */
+.descent-progress {
+  position: fixed;
+  z-index: 55;
+  right: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.descent-progress-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.descent-progress-track {
+  position: relative;
+  width: 1px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.descent-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0%;
+  background: #0ff;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+@media (max-width: 900px) {
+  .descent-progress {
+    display: none;
+  }
+}
+
+/* ─────────────────────────────
+   Hero — deep space
+─────────────────────────────── */
+.descent-hero {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 48px 40px;
+  overflow: hidden;
+}
+
+.descent-hero .glow-line {
+  margin-bottom: 24px;
+}
+
+.descent-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.descent-scroll-cue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 32px auto 0;
+  width: fit-content;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.descent-scroll-cue span:last-child {
+  width: 46px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+}
+
+/* ─────────────────────────────
+   Space — about (stop 2)
+─────────────────────────────── */
+.descent-space-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.descent-space-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+
+.descent-space-grid p {
+  margin: 0;
+  max-width: 58ch;
+  font-size: 20px;
+  line-height: 1.85;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: left;
+}
+
+.descent-space-note {
+  margin-top: 26px !important;
+  font-size: 15px !important;
+  line-height: 1.95 !important;
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+@media (max-width: 900px) {
+  .descent-space-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ─────────────────────────────
+   Clouds — skills (content stop
+   inside the transition zone)
+─────────────────────────────── */
+.descent-clouds-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.descent-clouds-content {
+  width: 100%;
+}
+
+.descent-clouds-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 64px;
+  align-items: start;
+  text-align: left;
+}
+
+.descent-clouds-grid h2 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  color: #1e1533;
+}
+
+.descent-clouds-grid > div:first-child p {
+  margin: 22px 0 0;
+  max-width: 34ch;
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 300;
+  color: rgba(30, 21, 51, 0.8);
+}
+
+@media (max-width: 900px) {
+  .descent-clouds-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ─────────────────────────────
+   Peaks — work
+─────────────────────────────── */
+.descent-peaks-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+/* ─────────────────────────────
+   Footer — mountain base
+─────────────────────────────── */
+.descent-footer-section {
+  position: relative;
+  z-index: 2;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0 0;
+}
+
+.descent-footer-content {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.descent-footer-bar {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding: 22px 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+}

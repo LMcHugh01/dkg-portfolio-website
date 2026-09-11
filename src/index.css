@@ -15,6 +15,11 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --space-black: #07060d;
+  --deep-violet: #1e1533;
+  --mid-violet: #453362;
+  --violet-transition: #8a68a0;
+  --soft-lavender: #a17fb3;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -59,7 +64,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(#000, #a17fb3);
+  background: var(--space-black); /* was: linear-gradient(#000, #a17fb3) */
   font-family: 'Fira Code', monospace;
   color: white;
 

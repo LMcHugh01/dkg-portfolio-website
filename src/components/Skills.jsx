@@ -2,26 +2,30 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../style/Skills.css";
 
-import {FaHtml5} from "react-icons/fa";
-import {FaCss3Alt} from "react-icons/fa";
-import {FaJs} from "react-icons/fa";
-import {FaReact} from "react-icons/fa";
-import {RiTailwindCssFill} from "react-icons/ri";
-import {FaNodeJs} from "react-icons/fa";
-import {SiExpress} from "react-icons/si";
-import {SiMongodb} from "react-icons/si";
-import {FaGitAlt} from "react-icons/fa";
-import {BiLogoFigma} from "react-icons/bi";
-import {FaShopify} from "react-icons/fa";
-import {RiSupabaseFill} from "react-icons/ri";
-// New imports for fleaRdam stack
-import {SiNextdotjs} from "react-icons/si";
-import {SiSanity} from "react-icons/si";
-import {SiStripe} from "react-icons/si";
+// Front-end
+import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiNextdotjs, SiAlpinedotjs } from "react-icons/si";
 
-import frontendIcon from "../assets/skill-icons/tab-markers/frontend-icon.png";
-import backendIcon from "../assets/skill-icons/tab-markers/backend-icon.png";
-import toolsIcon from "../assets/skill-icons/tab-markers/tools-icon.png";
+// Back-end & CMS
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress, SiPhp, SiMagento } from "react-icons/si";
+
+// Databases & APIs
+import { SiMongodb } from "react-icons/si";
+import { RiSupabaseFill } from "react-icons/ri";
+import { TbApi } from "react-icons/tb";
+
+// Tools & Platforms
+import { FaGitAlt, FaShopify } from "react-icons/fa";
+import { BiLogoFigma } from "react-icons/bi";
+import { SiVercel, SiNetlify, SiPostman, SiSanity, SiStripe, SiCanva } from "react-icons/si";
+
+// AI-Assisted Dev (no official icons yet — using stand-ins)
+import { TbRobot, TbCursorText } from "react-icons/tb";
+
+// Tab marker icons (react-icons, no extra image assets needed)
+import { LuLayoutPanelLeft, LuServer, LuDatabase, LuWrench, LuSparkles } from "react-icons/lu";
 
 const skillsData = {
   "Front-end": [
@@ -29,28 +33,45 @@ const skillsData = {
     { name: "CSS", icon: <FaCss3Alt /> },
     { name: "JavaScript", icon: <FaJs /> },
     { name: "React", icon: <FaReact /> },
-    { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
     { name: "Next.js", icon: <SiNextdotjs /> },
+    { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
+    { name: "Alpine.js", icon: <SiAlpinedotjs /> },
   ],
-  "Back-end": [
+  "Back-end & CMS": [
     { name: "Node.js", icon: <FaNodeJs /> },
     { name: "Express", icon: <SiExpress /> },
+    { name: "PHP", icon: <SiPhp /> },
+    { name: "Magento", icon: <SiMagento /> },
+    { name: "Hyvä", icon: <LuLayoutPanelLeft /> }, // no official icon — placeholder
+  ],
+  "Data & APIs": [
     { name: "MongoDB", icon: <SiMongodb /> },
+    { name: "Supabase", icon: <RiSupabaseFill /> },
+    { name: "REST APIs", icon: <TbApi /> },
   ],
   Tools: [
     { name: "Git", icon: <FaGitAlt /> },
     { name: "Figma", icon: <BiLogoFigma /> },
+    { name: "Postman", icon: <SiPostman /> },
+    { name: "Vercel", icon: <SiVercel /> },
+    { name: "Netlify", icon: <SiNetlify /> },
     { name: "Shopify", icon: <FaShopify /> },
-    { name: "Supabase", icon: <RiSupabaseFill /> },
     { name: "Sanity", icon: <SiSanity /> },
     { name: "Stripe", icon: <SiStripe /> },
+    { name: "Canva", icon: <SiCanva /> },
+  ],
+  "AI-Assisted Dev": [
+    { name: "Claude Code", icon: <TbRobot /> }, // no official icon — placeholder
+    { name: "Cursor", icon: <TbCursorText /> },  // no official icon — placeholder
   ],
 };
 
 const tabs = [
-  { key: "Front-end", icon: frontendIcon },
-  { key: "Back-end", icon: backendIcon },
-  { key: "Tools", icon: toolsIcon },
+  { key: "Front-end", icon: <LuLayoutPanelLeft /> },
+  { key: "Back-end & CMS", icon: <LuServer /> },
+  { key: "Data & APIs", icon: <LuDatabase /> },
+  { key: "Tools", icon: <LuWrench /> },
+  { key: "AI-Assisted Dev", icon: <LuSparkles /> },
 ];
 
 const Skills = () => {
@@ -91,7 +112,7 @@ const Skills = () => {
             className={`tab-marker ${activeTab === tab.key ? "active" : ""}`}
             onClick={() => setActiveTab(tab.key)}
           >
-             <img src={tab.icon} alt={tab.name} className="skill-icon" />
+            <span className="skill-icon">{tab.icon}</span>
           </div>
         ))}
       </div>
@@ -100,4 +121,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

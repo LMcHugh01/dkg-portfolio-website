@@ -4,7 +4,6 @@ function BackToProjects() {
   const navigate = useNavigate();
 
   const handleBack = () => {
-
     navigate(-1);
 
     setTimeout(() => {
@@ -14,7 +13,7 @@ function BackToProjects() {
   };
 
   return (
-    <button onClick={handleBack} className="back-link">
+    <button onClick={handleBack} className="back-link back-link-btn">
       ← Back to Projects
     </button>
   );

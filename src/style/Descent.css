@@ -1,0 +1,221 @@
+.descent-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .descent-space {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #07060d 0%, #07060d 40%, #100b1e 70%, #1e1533 100%);
+  }
+  
+  .descent-nebula-a {
+    position: absolute;
+    top: -10%;
+    left: -18%;
+    width: 90vw;
+    height: 80vh;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(69, 51, 98, 0.75), rgba(30, 21, 51, 0));
+    filter: blur(90px);
+  }
+  
+  .descent-nebula-b {
+    position: absolute;
+    top: 30%;
+    right: -22%;
+    width: 95vw;
+    height: 90vh;
+    border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(138, 104, 160, 0.42), rgba(138, 104, 160, 0));
+    filter: blur(110px);
+  }
+  
+  .descent-star-far {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image:
+      radial-gradient(1px 1px at 24px 38px, rgba(255, 255, 255, 0.42), transparent 100%),
+      radial-gradient(1px 1px at 118px 96px, rgba(255, 255, 255, 0.32), transparent 100%),
+      radial-gradient(1px 1px at 186px 22px, rgba(255, 255, 255, 0.36), transparent 100%),
+      radial-gradient(1px 1px at 62px 168px, rgba(255, 255, 255, 0.28), transparent 100%),
+      radial-gradient(1px 1px at 208px 142px, rgba(255, 255, 255, 0.3), transparent 100%);
+    background-size: 230px 230px;
+  }
+  
+  .descent-star-mid {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image:
+      radial-gradient(1.6px 1.6px at 40px 60px, rgba(255, 255, 255, 0.7), transparent 100%),
+      radial-gradient(1.6px 1.6px at 250px 140px, rgba(255, 255, 255, 0.6), transparent 100%),
+      radial-gradient(1.6px 1.6px at 150px 300px, rgba(255, 255, 255, 0.55), transparent 100%),
+      radial-gradient(1.6px 1.6px at 320px 250px, rgba(0, 255, 255, 0.4), transparent 100%);
+    background-size: 380px 380px;
+  }
+  
+  .descent-star-near {
+    position: absolute;
+    top: -30%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image:
+      radial-gradient(2.4px 2.4px at 90px 120px, rgba(255, 255, 255, 0.95), transparent 100%),
+      radial-gradient(2.2px 2.2px at 460px 380px, rgba(255, 255, 255, 0.85), transparent 100%),
+      radial-gradient(2.6px 2.6px at 300px 540px, rgba(255, 0, 255, 0.45), transparent 100%);
+    background-size: 620px 620px;
+  }
+  
+  .descent-sky {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: linear-gradient(180deg, #6d5288 0%, #8a68a0 32%, #a17fb3 62%, #c3aacf 100%);
+  }
+  
+  .descent-mountain-far {
+    position: absolute;
+    left: -6%;
+    right: -6%;
+    bottom: -6%;
+    height: 46vh;
+    opacity: 0;
+    background: linear-gradient(180deg, #8f74a5 0%, #7d648f 100%);
+    clip-path: polygon(0% 62%, 9% 44%, 17% 55%, 27% 30%, 36% 49%, 47% 26%, 58% 47%, 68% 33%, 78% 52%, 88% 38%, 100% 58%, 100% 100%, 0% 100%);
+    filter: blur(7px);
+  }
+  
+  .descent-mountain-mid {
+    position: absolute;
+    left: -6%;
+    right: -6%;
+    bottom: -8%;
+    height: 40vh;
+    opacity: 0;
+    background: linear-gradient(180deg, #5f4a7c 0%, #4b3a63 100%);
+    clip-path: polygon(0% 74%, 12% 46%, 22% 62%, 33% 34%, 44% 58%, 56% 30%, 67% 56%, 79% 40%, 90% 60%, 100% 48%, 100% 100%, 0% 100%);
+    filter: blur(4px);
+  }
+  
+  .descent-mountain-near {
+    position: absolute;
+    left: -8%;
+    right: -8%;
+    bottom: -10%;
+    height: 46vh;
+    opacity: 0;
+    background: linear-gradient(180deg, #2c2046 0%, #1e1533 62%, #17102a 100%);
+    clip-path: polygon(0% 78%, 14% 40%, 26% 66%, 38% 24%, 52% 62%, 64% 36%, 76% 68%, 88% 46%, 100% 72%, 100% 100%, 0% 100%);
+    filter: blur(2px);
+  }
+  
+  .descent-cloud-1 {
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    top: 8%;
+    height: 70vh;
+    opacity: 0;
+    background:
+      radial-gradient(closest-side at 22% 55%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 100%),
+      radial-gradient(closest-side at 62% 40%, rgba(240, 235, 248, 0.8), rgba(240, 235, 248, 0) 100%),
+      radial-gradient(closest-side at 86% 62%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 100%);
+    filter: blur(50px);
+    animation: descent-drift 60s ease-in-out infinite alternate;
+  }
+  
+  .descent-cloud-2 {
+    position: absolute;
+    left: -25%;
+    right: -25%;
+    top: 22%;
+    height: 80vh;
+    opacity: 0;
+    background:
+      radial-gradient(closest-side at 34% 48%, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0) 100%),
+      radial-gradient(closest-side at 74% 58%, rgba(246, 242, 252, 0.88), rgba(246, 242, 252, 0) 100%);
+    filter: blur(60px);
+    animation: descent-drift 84s ease-in-out infinite alternate-reverse;
+  }
+  
+  .descent-cloud-3 {
+    position: absolute;
+    inset: -15% -25%;
+    opacity: 0;
+    background: radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.6) 62%, rgba(255, 255, 255, 0.18) 100%);
+    filter: blur(40px);
+  }
+  
+  .descent-cloud-4 {
+    position: absolute;
+    left: -22%;
+    right: -22%;
+    bottom: -6%;
+    height: 78vh;
+    opacity: 0;
+    background:
+      radial-gradient(closest-side at 28% 46%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 100%),
+      radial-gradient(closest-side at 70% 56%, rgba(233, 226, 242, 0.85), rgba(233, 226, 242, 0) 100%);
+    filter: blur(66px);
+    animation: descent-drift 72s ease-in-out infinite alternate;
+  }
+  
+  .descent-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.42;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+  
+  @keyframes descent-drift {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-4%, 0, 0); }
+  }
+  
+  /* Planet — full-width band at the top of the hero, only the upper arc
+     visible. Lives inside the hero section, not the fixed background layer,
+     but shares the same data-layer targeting system. Centering uses width:
+     100% rather than a transform trick, since the engine drives `transform`
+     directly on this element for the scroll-parallax drift. */
+  .descent-planet-band {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 44vh;
+    overflow: hidden;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+  
+  .descent-planet-disc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: descent-spin 120s linear infinite;
+  }
+  
+  .descent-planet-disc img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  @keyframes descent-spin {
+    to { transform: rotate(360deg); }
+  }
